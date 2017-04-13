@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
+	// Initialze pq
 	_ "github.com/lib/pq"
 )
 
