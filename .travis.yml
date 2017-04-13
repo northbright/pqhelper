@@ -1,0 +1,17 @@
+language: go
+
+go:
+  - 1.4.2
+  - 1.5
+  - 1.6
+  - 1.7
+  - 1.8
+  - tip
+
+services:
+  - postgresql
+
+before_install:
+
+install:
+  - go get github.com/lib/pq
