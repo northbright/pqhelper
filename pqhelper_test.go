@@ -21,9 +21,9 @@ func ExampleTableExists() {
 	var exists bool
 	var db *sql.DB
 
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s dbname=%s sslmode=disable", host, port, user, dbname)
+	connStr := fmt.Sprintf("host=%s port=%d user=%s dbname=%s sslmode=disable", host, port, user, dbname)
 
-	if db, err = sql.Open("postgres", psqlInfo); err != nil {
+	if db, err = sql.Open("postgres", connStr); err != nil {
 		log.Printf("sql.Open() error: %v\n", err)
 		return
 	}
